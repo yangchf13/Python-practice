@@ -1,0 +1,19 @@
+#! usr/bin/env python3
+# -*- coding: utf-8 -*-
+#python3 practice1
+#By carson 2019.02.25
+
+import random
+
+player=input("请选择：石头(1) 剪刀(2) 布(3)")
+computer_chioce=random.randint(1,3)
+player_choice=int(player)
+
+if ((player_choice==1 and computer_chioce==2)
+		or (player_choice==2 and computer_chioce==3) 
+		or (player_choice==3 and computer_chioce==1)):
+	print("you choose %d ,computer chooses %d ,you win !"%(player_choice,computer_chioce))
+elif (player_choice==computer_chioce):
+	print('you choose %d ,computer chooses %d ,you are same,one more!'%(player_choice,computer_chioce))
+else:
+	print('you choose %d ,computer chooses %d , lose! play again'%(player_choice,computer_chioce))
