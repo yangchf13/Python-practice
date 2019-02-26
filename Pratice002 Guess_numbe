@@ -7,12 +7,12 @@ import random
 
 computer_number=random.randint(0,99)
 guess_number=int(input('请输入0~99之间的数'))
+n=4
 
-while (guess_number > 99):
-	print('输入的数字错误')
+while (guess_number > 99 or guess_number < 0):
+	print('输入错误，剩余次数 %d'%n)
 	guess_number=int(input('请输入0~99之间的数'))
 
-n=5
 print ('computer_number is %d'%computer_number )
 
 while n>0:
@@ -23,20 +23,21 @@ while n>0:
 		print('you guess too big,one more!')
 		guess_number=int(input('请输入0~99之间的数'))
 		n-=1
-		print(n)
+		print('输入错误，剩余次数 %d'%n)
 	elif (guess_number>computer_number):
 		print('you guess bigger,one more!')
 		guess_number=int(input('请输入0~99之间的数'))
 		n -= 1
-		print(n)
+		print('输入错误，剩余次数 %d'%n)
 	elif (computer_number-guess_number>=20):
 		print('you guess too low,one more!')
 		guess_number=int(input('请输入0~99之间的数'))
 		n -= 1
-		print(n)
+		print('输入错误，剩余次数 %d'%n)
 	else :
 		print('you guess lower,one more!')
 		guess_number=int(input('请输入0~99之间的数'))
-		nn-=1
-		print(n)
+		n-=1
+		print('输入错误，剩余次数 %d'%n)
 print ('computer_number is %d'%computer_number )
+
